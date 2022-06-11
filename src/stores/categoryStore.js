@@ -20,6 +20,17 @@ class CategoryStore {
       );
     }
   };
+  categoryCreate = async (newCategory) => {
+    try {
+      const response = await instance.get("/categories", newCategory);
+      this.categories.push(response.date);
+    } catch (error) {
+      console.log(
+        "🚀 ~ file: categoryStore.js ~ line 17 ~ CategoryStore ~ categoriesList= ~ error",
+        error
+      );
+    }
+  };
 }
 
 const categoryStore = new CategoryStore();
