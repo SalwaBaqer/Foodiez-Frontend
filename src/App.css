@@ -23,16 +23,17 @@ margin-right: 15%;
 .category-item-container{
   text-align: center;
   background-color: beige;
-  display: inline;
   margin: 25px;
   border-radius: 10px;
+  position: relative;
 }
 
 .category-list-container{
   align-items: center;
   display: flex;
   margin: 20px;
-  width: 80%;
+  width: 1200px;
+  max-width: calc(100% - 20px);
 }
 
 .view-reciepe-btn{
@@ -117,20 +118,25 @@ transition: all 0.3s;
 }
 
 .btn-cancel{
-  position: relative;
-  height: 2rem;
-  width: 7rem;
-  padding: 0 1.5rem;
-  border-radius:1.5rem;
-  background: #a6b8cf;
-  color: #ffffff;
-  transition: all 0.3s;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 1.5rem;
   border: none;
-  margin: 5px
-}
-.btn-cancel:hover{
-  background: #6d7a8a;
-}
+  background: linear-gradient(
+    -45deg, #6c7a7c, #c4c5c8, #565757
+    );
+  background-size: 400%;
+  background-position: 90% 0;
+  color: #ffffff;
+  transition: background 0.8s;
+  margin-bottom: 10px;
+  }
+  
+  .btn-cancel:hover{
+    background-position: 185% 50%;
+  }
+
+
 
 .title::first-letter{
   text-align: center;

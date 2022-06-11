@@ -8,7 +8,7 @@ function App() {
   return (
     <div style={{textAlign: "center"}}>
       <h1 className="title">Foodiez</h1>
-      <CategoryList />
+      <CategoryList />    
       <SignupModal />
     </div>
   );
