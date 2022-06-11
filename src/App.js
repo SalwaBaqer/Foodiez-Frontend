@@ -8,8 +8,8 @@ import { observer } from "mobx-react";
 
 function App() {
   return (
-    <div>
-      <h1>Welcome {authStore.user.username}</h1>
+    <div style={{ textAlign: "center" }}>
+      <h1 className="title">Foodiez</h1>
       <CategoryList />
       <SignupModal />
     </div>

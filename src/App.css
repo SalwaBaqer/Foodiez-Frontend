@@ -1,22 +1,23 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-btn-container{
+text-align: right;
+margin-right: 15%;
 }
 
 .img-item {
   height: 200px;
   width: 250px;
   border-radius: 10px;
+  position: relative;
+  opacity: .8;
+}
+
+.like-btn{
+  position: absolute;
+  z-index: 2;
+  color: #2b6fc9;
+  position: absolute;
 }
 
 .category-item-container{
@@ -31,28 +32,109 @@
   align-items: center;
   display: flex;
   margin: 20px;
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.view-reciepe-btn{
+  height: 40px;
+padding: 0 20px;
+border-radius: 1.5rem;
+border: none;
+background:
+linear-gradient(
+-45deg, #25d3ea, #3b87eb, #25d3ea
+);
+background-size: 400%;
+background-position: 90% 0;
+color: #ffffff;
+transition: background 0.8s;
+margin-bottom: 10px;
+}
+
+.view-reciepe-btn:hover {
+  background-position: 185% 50%;
+}
+
+.btns-container{
+text-align: center;
+}
+
+.margin-20{
+  margin: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.label-wrapper{
+  width: 90px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label-style{
+  margin-right: 10px;
+  width: 30px;
+  font-weight: bold;
+}
+
+.input-width-200{
+width: 200px;
+}
+
+.btn-cool{
+  position: relative;
+  height: 2rem;
+  width: 7rem;
+  padding: 0 1.5rem;
+  border-radius:1.5rem;
+  background: #3b87eb;
+  color: #ffffff;
+  transition: all 0.3s;
+  border: none;
+  margin: 5px
+}
+.btn-cool:hover{
+  background: transparent;
+letter-spacing: 2px;
+color: black;
+}
+
+.btn-cool::before{top:0}
+.btn-cool::after{bottom:0}
+
+.btn-cool:hover::before,
+.btn-cool:hover::after{
+transform: scaleX(1)}
+
+
+.btn-cool::before,
+.btn-cool::after{
+content:"";
+position: absolute;
+left: 0;
+transform: scaleX(0);
+width: 100%;
+height: 0.5px;
+background: rgb(0, 0, 0);
+transition: all 0.3s;
+}
+
+.btn-cancel{
+  position: relative;
+  height: 2rem;
+  width: 7rem;
+  padding: 0 1.5rem;
+  border-radius:1.5rem;
+  background: #a6b8cf;
+  color: #ffffff;
+  transition: all 0.3s;
+  border: none;
+  margin: 5px
+}
+.btn-cancel:hover{
+  background: #6d7a8a;
+}
+
+.title::first-letter{
+  text-align: center;
+  font-size: 4rem;
+  color:#3b87eb;
+  font-family: Snell Roundhand, cursive
 }
