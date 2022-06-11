@@ -4,8 +4,7 @@ import FavoriteButton from "../buttons/FavoriteButton";
 function CategoryItem({ category }) {
   return (
     <div className="category-item-container">
-      <div>
-        <FavoriteButton />
+      <div className="cover">
         <img src={category.image} className="img-item" />
       </div>
       <p>{category.name}</p>

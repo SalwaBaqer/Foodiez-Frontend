@@ -1,6 +1,6 @@
 import React from "react";
-import { MdFavorite } from "react-icons/md";
+import { BsBookmarkFill } from "react-icons/bs";
 
 export default function FavoriteButton() {
-  return <MdFavorite color="red" />;
+  return <BsBookmarkFill size={40} className="like-btn" />;
 }

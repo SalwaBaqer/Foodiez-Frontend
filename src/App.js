@@ -6,8 +6,8 @@ import SignupModal from "./components/signup/SingupModal";
 
 function App() {
   return (
-    <div>
-      <h1>Welcome to our Foodiez Project!</h1>
+    <div style={{textAlign: "center"}}>
+      <h1 className="title">Foodiez</h1>
       <CategoryList />
       <SignupModal />
     </div>
