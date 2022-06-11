@@ -1,5 +1,6 @@
 import "./App.css";
 import CategoryList from "./components/category/CategoryList";
+import SignupModal from "./components/signup/SingupModal";
 
 //components
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <h1>Welcome to our Foodiez Project!</h1>
       <CategoryList />
+      <SignupModal />
     </div>
   );
 }
