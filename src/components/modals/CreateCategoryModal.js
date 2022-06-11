@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
+import categoryStore from "../../stores/categoryStore";
 
 export default function CreateCategoryModal({ modalIsOpen, closeModal }) {
 const [category, setCategory] = useState(null)
  const handleChange = (e)=>{
 setCategory({...category, [e.target.name]: e.target.value})
  }
-
+ const handleImageChange =(e)=>{
+setCategory({...category, [e.target.name]: e.target.files[0]})
+ }
 
   const handleSubmit = (e) =>{
   e.preventDefault()
-  console.log({category})
+  categoryStore.categoryCreate(category)
+  setCategory(null)
   closeModal()
   }
   return (
@@ -32,7 +36,7 @@ setCategory({...category, [e.target.name]: e.target.value})
           <div className="label-wrapper">
           <label className="label-style">Image</label>
           </div>
-          <input image="image" type="file" className="input-width-200"/>
+          <input name="image" onChange={handleImageChange} type="file" className="input-width-200"/>
           </div>
           <div className="btns-container">
           <button className="btn-cool" type="submit">Add</button>

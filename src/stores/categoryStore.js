@@ -22,8 +22,10 @@ class CategoryStore {
   };
   categoryCreate = async (newCategory) => {
     try {
-      const response = await instance.get("/categories", newCategory);
-      this.categories.push(response.date);
+      const formData = new FormData();
+      for (const key in newCategory) formData.append(key, newCategory[key]);
+      const response = await instance.post("/categories", formData);
+      this.categories.push(response.data);
     } catch (error) {
       console.log(
         "🚀 ~ file: categoryStore.js ~ line 17 ~ CategoryStore ~ categoriesList= ~ error",
