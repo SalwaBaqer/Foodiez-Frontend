@@ -17,6 +17,16 @@ class AuthStore {
       console.log("AuthStore -> signup -> error", error);
     }
   };
+  signin = async (userData) => {
+    try {
+      const response = await instance.post("/users/signin", userData);
+      const token = response.data;
+      const decoded = jwt_decode(token);
+      this.user = decoded;
+    } catch (error) {
+      console.log("AuthStore -> signin -> error", error);
+    }
+  };
 }
 
 const authStore = new AuthStore();
