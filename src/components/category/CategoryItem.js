@@ -1,5 +1,4 @@
 import React from "react";
-import FavoriteButton from "../buttons/FavoriteButton";
 
 function CategoryItem({ category }) {
   return (
