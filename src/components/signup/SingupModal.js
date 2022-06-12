@@ -3,6 +3,7 @@ import { useState } from "react";
 import authStore from "../../stores/authStore";
 
 function SignupModal() {
+  <div className="signup-modal"></div>;
   const [show, setShow] = useState(false);
   const [user, setUser] = useState();
 
@@ -20,7 +21,7 @@ function SignupModal() {
 
   return (
     <>
-      <Button variant="outline-light" onClick={handleShow}>
+      <Button variant="outline-light" onClick={handleShow} className="mb3">
         Signup
       </Button>
       <Modal show={show} onHide={handleClose}>
@@ -44,7 +45,7 @@ function SignupModal() {
                 placeholder="Password"
               />
             </InputGroup>
-            <Button variant="outline-dark" type="submit">
+            <Button variant="outline-dark" type="submit" className="mb3">
               Signup
             </Button>
           </form>

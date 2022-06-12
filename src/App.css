@@ -28,6 +28,30 @@ margin-right: 15%;
   border-radius: 10px;
 }
 
+.mb-3{
+  text-align: center;
+  display: flex;
+  padding: 5px 20px;
+}
+.mb3{
+  text-align: center;
+  align-items: center;
+  display: flex;
+  height: 40px;
+  padding: 0px 20px;
+  border-radius: 1.5rem;
+  border: none;
+  background:
+  linear-gradient(
+  -45deg, #25d3ea, #3b87eb, #25d3ea
+  );
+  background-size: 400%;
+  background-position: 90% 0;
+  color: #ffffff;
+  transition: background 0.8s;
+  margin-bottom: 10px;
+}
+
 .category-list-container{
   align-items: center;
   display: flex;
